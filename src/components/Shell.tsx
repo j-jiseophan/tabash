@@ -18,7 +18,7 @@ const Shell = () => {
         autoHeight
         autoHeightMax={rem2px(27)}
         onUpdate={scrollerRef.current?.scrollToBottom}
-        style={{ width: "50%" }}
+        style={{ width: "100%" }}
       >
         {consoleHistory.map((msg, index) => {
           return <p key={index}>{msg}</p>;
