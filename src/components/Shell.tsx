@@ -9,6 +9,9 @@ const Shell = () => {
   const scrollerRef = useRef<Scrollbars>(null);
   const [consoleHistory, setConsoleHistory] = useState<string[]>([]);
   useEffect(() => {
+    scrollerRef.current?.scrollToBottom();
+  }, [consoleHistory]);
+  useEffect(() => {
     inputRef.current?.focus();
   }, []);
   return (
@@ -17,7 +20,6 @@ const Shell = () => {
         ref={scrollerRef}
         autoHeight
         autoHeightMax={rem2px(27)}
-        onUpdate={scrollerRef.current?.scrollToBottom}
         style={{ width: "100%" }}
       >
         {consoleHistory.map((msg, index) => {
