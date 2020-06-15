@@ -1,6 +1,6 @@
 .shell {
   width: 50%;
-  height: 50%;
+  height: 28rem;
   background-color: #212121;
   color: #eaeaea;
   padding: 1rem;
@@ -13,10 +13,12 @@
     border: none;
     outline: none;
     font-size: 1rem;
+    height: 1rem;
   }
 
   p {
     margin: 0;
     font-family: Arial;
+    height: 1rem;
   }
 }
