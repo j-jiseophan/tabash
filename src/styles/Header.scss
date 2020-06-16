@@ -7,4 +7,18 @@
   padding-right: 1rem;
   font-size: 1.2rem;
   border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    height: 70%;
+
+    img {
+      height: 100%;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
 }
