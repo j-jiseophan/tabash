@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import "../styles/Shell.scss";
 import { rem2px } from "../utils/utils";
-import { consolePrefix } from "../constants/constants";
+import { consolePrefix } from "../constants/shell";
 import { ShellProps } from "../types/shell";
 
 const Shell = ({ state, actions }: ShellProps) => {

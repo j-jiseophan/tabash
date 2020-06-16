@@ -14,3 +14,14 @@ export interface ShellProps {
   state: ShellState;
   actions: ShellActions;
 }
+
+export interface ProgramProps {
+  state: ShellState;
+  actions: ShellActions;
+  args: string[];
+}
+
+export interface Program {
+  name: string;
+  run: (props: ProgramProps) => void;
+}
