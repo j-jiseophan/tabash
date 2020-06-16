@@ -41,6 +41,7 @@ const Shell = ({ state, actions }: ShellProps) => {
             ...state.consoleHistory,
             consolePrefix.concat(state.inputValue),
           ]);
+          actions.runCommand(state.inputValue);
           actions.setInputValue("");
         }}
       />

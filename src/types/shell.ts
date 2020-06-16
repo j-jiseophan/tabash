@@ -1,5 +1,3 @@
-import ShellWrapper from "../components/ShellWrapper";
-
 import React from "react";
 
 export interface ShellState {
@@ -9,6 +7,7 @@ export interface ShellState {
 export interface ShellActions {
   setConsoleHistory: React.Dispatch<string[]>;
   setInputValue: React.Dispatch<string>;
+  runCommand: (command: string) => void;
 }
 
 export interface ShellProps {
