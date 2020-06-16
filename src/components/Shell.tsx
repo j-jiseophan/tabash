@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import "../styles/Shell.scss";
 import { rem2px } from "../utils/utils";
+import { consolePrefix } from "../constants/constants";
 
 const Shell = () => {
   const [intputValue, setInputValue] = useState("");
@@ -29,13 +30,18 @@ const Shell = () => {
 
       <input
         ref={inputRef}
-        value={`$ ${intputValue}`}
-        onChange={(e) => setInputValue(e.target.value.substring(2))}
+        value={`${consolePrefix}${intputValue}`}
+        onChange={(e) =>
+          setInputValue(e.target.value.substring(consolePrefix.length))
+        }
         onKeyDown={(e) => {
           if (e.key !== "Enter") {
             return;
           }
-          setConsoleHistory([...consoleHistory, intputValue]);
+          setConsoleHistory([
+            ...consoleHistory,
+            consolePrefix.concat(intputValue),
+          ]);
           setInputValue("");
         }}
       />
