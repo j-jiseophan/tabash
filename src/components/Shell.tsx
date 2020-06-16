@@ -1,17 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import "../styles/Shell.scss";
 import { rem2px } from "../utils/utils";
 import { consolePrefix } from "../constants/constants";
+import { ShellProps } from "../types/shell";
 
-const Shell = () => {
-  const [intputValue, setInputValue] = useState("");
+const Shell = ({ state, actions }: ShellProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollerRef = useRef<Scrollbars>(null);
-  const [consoleHistory, setConsoleHistory] = useState<string[]>([]);
   useEffect(() => {
     scrollerRef.current?.scrollToBottom();
-  }, [consoleHistory]);
+  }, [state.consoleHistory]);
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
@@ -23,26 +22,26 @@ const Shell = () => {
         autoHeightMax={rem2px(26.7)}
         style={{ width: "100%" }}
       >
-        {consoleHistory.map((msg, index) => {
+        {state.consoleHistory.map((msg: string, index: number) => {
           return <p key={index}>{msg}</p>;
         })}
       </Scrollbars>
 
       <input
         ref={inputRef}
-        value={`${consolePrefix}${intputValue}`}
+        value={`${consolePrefix}${state.inputValue}`}
         onChange={(e) =>
-          setInputValue(e.target.value.substring(consolePrefix.length))
+          actions.setInputValue(e.target.value.substring(consolePrefix.length))
         }
         onKeyDown={(e) => {
           if (e.key !== "Enter") {
             return;
           }
-          setConsoleHistory([
-            ...consoleHistory,
-            consolePrefix.concat(intputValue),
+          actions.setConsoleHistory([
+            ...state.consoleHistory,
+            consolePrefix.concat(state.inputValue),
           ]);
-          setInputValue("");
+          actions.setInputValue("");
         }}
       />
     </div>
