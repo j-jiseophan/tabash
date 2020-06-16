@@ -23,7 +23,11 @@ const Shell = ({ state, actions }: ShellProps) => {
         style={{ width: "100%" }}
       >
         {state.consoleHistory.map((msg: string, index: number) => {
-          return <p key={index}>{msg}</p>;
+          return (
+            <div className="stdout" key={index}>
+              {msg}
+            </div>
+          );
         })}
       </Scrollbars>
 
@@ -37,10 +41,6 @@ const Shell = ({ state, actions }: ShellProps) => {
           if (e.key !== "Enter") {
             return;
           }
-          actions.setConsoleHistory([
-            ...state.consoleHistory,
-            consolePrefix.concat(state.inputValue),
-          ]);
           actions.runCommand(state.inputValue);
           actions.setInputValue("");
         }}
