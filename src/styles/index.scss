@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Cascadia Code";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,4 +13,12 @@ code {
 #root {
   height: 100vh;
   background: linear-gradient(#008081, #1034a6);
+}
+
+@font-face {
+  font-family: "Cascadia Code";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets//CascadiaCode.ttf") format("truetype"),
+    url("../assets//CascadiaCode.woff2") format("woff2");
 }

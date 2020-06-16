@@ -29,8 +29,8 @@ const Shell = () => {
 
       <input
         ref={inputRef}
-        value={`$  ${intputValue}`}
-        onChange={(e) => setInputValue(e.target.value.substring(3))}
+        value={`$ ${intputValue}`}
+        onChange={(e) => setInputValue(e.target.value.substring(2))}
         onKeyDown={(e) => {
           if (e.key !== "Enter") {
             return;
