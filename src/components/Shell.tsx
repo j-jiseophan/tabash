@@ -20,7 +20,7 @@ const Shell = () => {
       <Scrollbars
         ref={scrollerRef}
         autoHeight
-        autoHeightMax={rem2px(27)}
+        autoHeightMax={rem2px(26.7)}
         style={{ width: "100%" }}
       >
         {consoleHistory.map((msg, index) => {
