@@ -1,50 +1,50 @@
-import React, { useState } from "react";
+import React from "react";
+import { useImmer } from "use-immer";
 import Shell from "./Shell";
 import { tokenize } from "../utils/parser";
 import { programs } from "../constants/programs";
-import { Link, ShellActions, ShellState } from "../types/shell";
+import { ShellState } from "../types/shell";
 import { defaultLinks, consolePrefix } from "../constants/shell";
 
 const ShellWrapper = () => {
-  const [consoleHistory, setConsoleHistory] = useState<string[]>([]);
-  const [inputValue, setInputValue] = useState<string>("");
-  const [links, setLinks] = useState<Link[]>(defaultLinks);
+  const [shellState, updateShellState] = useImmer<ShellState>({
+    consoleHistory: [],
+    inputValue: "",
+    links: defaultLinks,
+  });
   const runCommand = (command: string) => {
     const tokens = tokenize(command);
     const program = programs.find((program) => program.name === tokens[0]);
     // case 1: run program
     if (program) {
-      program.run({ state, actions, args: tokens.slice(1), command });
+      program.run({
+        shellState,
+        updateShellState,
+        args: tokens.slice(1),
+        command,
+      });
       return;
     }
     // case 2: go link
-    const link = links.find((link) => link.name === tokens[0]);
+    const link = shellState.links.find((link) => link.name === tokens[0]);
     if (link) {
       window.location.href = `https://${link.url}`;
       return;
     }
     // case 3: command not found
     const errorMsg = `${tokens[0]}: command not found`;
-    setConsoleHistory([
-      ...consoleHistory,
-      consolePrefix.concat(command),
-      errorMsg,
-    ]);
-  };
-  const state: ShellState = {
-    consoleHistory,
-    inputValue,
-    links,
-  };
-  const actions: ShellActions = {
-    setConsoleHistory,
-    setInputValue,
-    runCommand,
-    setLinks,
+    updateShellState((draft) => {
+      draft.consoleHistory.push(consolePrefix.concat(command));
+      draft.consoleHistory.push(errorMsg);
+    });
   };
   return (
     <>
-      <Shell state={state} actions={actions} />
+      <Shell
+        shellState={shellState}
+        updateShellState={updateShellState}
+        runCommand={runCommand}
+      />
     </>
   );
 };

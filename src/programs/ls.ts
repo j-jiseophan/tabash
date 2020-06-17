@@ -1,15 +1,19 @@
 import { Program, ProgramProps } from "../types/shell";
 import { consolePrefix } from "../constants/shell";
 
-const runLs = ({ state, actions, args, command }: ProgramProps) => {
-  const outputMsg = state.links
+const runLs = ({
+  shellState,
+  updateShellState,
+  args,
+  command,
+}: ProgramProps) => {
+  const outputMsg = shellState.links
     .map((link) => link.name.trim())
     .join("\u00A0\u00A0\u00A0\u00A0");
-  actions.setConsoleHistory([
-    ...state.consoleHistory,
-    consolePrefix.concat(command),
-    outputMsg,
-  ]);
+  updateShellState((draft) => {
+    draft.consoleHistory.push(consolePrefix.concat(command));
+    draft.consoleHistory.push(outputMsg);
+  });
   return;
 };
 

@@ -5,12 +5,12 @@ import { rem2px } from "../utils/utils";
 import { consolePrefix } from "../constants/shell";
 import { ShellProps } from "../types/shell";
 
-const Shell = ({ state, actions }: ShellProps) => {
+const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollerRef = useRef<Scrollbars>(null);
   useEffect(() => {
     scrollerRef.current?.scrollToBottom();
-  }, [state.consoleHistory]);
+  }, [shellState.consoleHistory]);
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
@@ -22,7 +22,7 @@ const Shell = ({ state, actions }: ShellProps) => {
         autoHeightMax={rem2px(26.7)}
         style={{ width: "100%" }}
       >
-        {state.consoleHistory.map((msg: string, index: number) => {
+        {shellState.consoleHistory.map((msg: string, index: number) => {
           return (
             <div className="stdout" key={index}>
               {msg}
@@ -33,16 +33,21 @@ const Shell = ({ state, actions }: ShellProps) => {
 
       <input
         ref={inputRef}
-        value={`${consolePrefix}${state.inputValue}`}
-        onChange={(e) =>
-          actions.setInputValue(e.target.value.substring(consolePrefix.length))
-        }
+        value={`${consolePrefix}${shellState.inputValue}`}
+        onChange={(e) => {
+          const inputValue = e.target.value.substring(consolePrefix.length);
+          updateShellState((draft) => {
+            draft.inputValue = inputValue;
+          });
+        }}
         onKeyDown={(e) => {
           if (e.key !== "Enter") {
             return;
           }
-          actions.runCommand(state.inputValue);
-          actions.setInputValue("");
+          runCommand(shellState.inputValue);
+          updateShellState((draft) => {
+            draft.inputValue = "";
+          });
         }}
       />
     </div>

@@ -1,25 +1,18 @@
-import React from "react";
-
 export interface ShellState {
   consoleHistory: string[];
   inputValue: string;
   links: Link[];
 }
-export interface ShellActions {
-  setConsoleHistory: React.Dispatch<string[]>;
-  setInputValue: React.Dispatch<string>;
-  runCommand: (command: string) => void;
-  setLinks: React.Dispatch<Link[]>;
-}
 
 export interface ShellProps {
-  state: ShellState;
-  actions: ShellActions;
+  shellState: ShellState;
+  updateShellState: UpdateShellState;
+  runCommand: (command: string) => void;
 }
 
 export interface ProgramProps {
-  state: ShellState;
-  actions: ShellActions;
+  shellState: ShellState;
+  updateShellState: UpdateShellState;
   args: string[];
   command: string;
 }
@@ -33,3 +26,7 @@ export interface Link {
   name: string;
   url: string;
 }
+
+export type UpdateShellState = (
+  f: (draft: ShellState) => void | ShellState
+) => void;
