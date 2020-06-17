@@ -49,6 +49,7 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
             draft.inputValue = "";
           });
         }}
+        spellCheck={false}
       />
     </div>
   );
