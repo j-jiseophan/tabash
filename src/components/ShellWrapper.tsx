@@ -7,7 +7,7 @@ import { ShellState, Link } from "../types/shell";
 import { defaultLinks, consolePrefix } from "../constants/shell";
 import * as Tabash from "../utils/shell";
 import { removeProtocol } from "../utils/utils";
-import { stdout } from "process";
+
 const ShellWrapper = () => {
   const [shellState, updateShellState] = useImmer<ShellState>({
     stdout: [],
