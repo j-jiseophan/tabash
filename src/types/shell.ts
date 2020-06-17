@@ -14,7 +14,6 @@ export interface ProgramProps {
   shellState: ShellState;
   updateShellState: UpdateShellState;
   args: string[];
-  command: string;
 }
 
 export interface Program {
