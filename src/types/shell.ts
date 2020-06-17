@@ -1,5 +1,5 @@
 export interface ShellState {
-  consoleHistory: string[];
+  stdout: string[];
   inputValue: string;
   links: Link[];
 }

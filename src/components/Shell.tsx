@@ -10,7 +10,7 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
   const scrollerRef = useRef<Scrollbars>(null);
   useEffect(() => {
     scrollerRef.current?.scrollToBottom();
-  }, [shellState.consoleHistory]);
+  }, [shellState.stdout]);
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
@@ -22,7 +22,7 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
         autoHeightMax={rem2px(26.7)}
         style={{ width: "100%" }}
       >
-        {shellState.consoleHistory.map((msg: string, index: number) => {
+        {shellState.stdout.map((msg: string, index: number) => {
           return (
             <div className="stdout" key={index}>
               {msg}

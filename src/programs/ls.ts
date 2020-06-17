@@ -5,7 +5,7 @@ const runLs = ({ shellState, updateShellState, args }: ProgramProps) => {
     .map((link) => link.name.trim())
     .join("\u00A0\u00A0\u00A0\u00A0");
   updateShellState((draft) => {
-    draft.consoleHistory.push(outputMsg);
+    draft.stdout.push(outputMsg);
   });
   return;
 };

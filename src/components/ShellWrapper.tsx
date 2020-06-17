@@ -8,7 +8,7 @@ import { defaultLinks, consolePrefix } from "../constants/shell";
 
 const ShellWrapper = () => {
   const [shellState, updateShellState] = useImmer<ShellState>({
-    consoleHistory: [],
+    stdout: [],
     inputValue: "",
     links: defaultLinks,
   });
@@ -16,7 +16,7 @@ const ShellWrapper = () => {
     const tokens = tokenize(command);
     const program = programs.find((program) => program.name === tokens[0]);
     updateShellState((draft) => {
-      draft.consoleHistory.push(consolePrefix.concat(command));
+      draft.stdout.push(consolePrefix.concat(command));
     });
 
     // case 0: empty string
@@ -44,7 +44,7 @@ const ShellWrapper = () => {
     // case 3: command not found
     const errorMsg = `${tokens[0]}: command not found`;
     updateShellState((draft) => {
-      draft.consoleHistory.push(errorMsg);
+      draft.stdout.push(errorMsg);
     });
   };
   return (
