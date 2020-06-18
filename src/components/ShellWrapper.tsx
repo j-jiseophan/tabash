@@ -9,7 +9,7 @@ import {
   consolePrefix,
   WELCOME_GUIDES,
 } from "../constants/shell";
-import * as Tabash from "../utils/shell";
+import { toStdout, toStderr } from "../utils/shell";
 import { removeProtocol } from "../utils/utils";
 
 const ShellWrapper = () => {
@@ -22,7 +22,7 @@ const ShellWrapper = () => {
     const tokens = tokenize(command);
     const program = programs.find((program) => program.name === tokens[0]);
 
-    Tabash.stdout(consolePrefix.concat(command), updateShellState);
+    toStdout(consolePrefix.concat(command), updateShellState);
 
     // case 0: empty string
     if (command.length === 0) {
@@ -32,7 +32,7 @@ const ShellWrapper = () => {
     // case 1: run program
     if (program) {
       if (tokens[1] === "=") {
-        Tabash.stderr(
+        toStderr(
           `Error: "${tokens[0]}" is reserved for program`,
           updateShellState
         );
@@ -49,10 +49,7 @@ const ShellWrapper = () => {
     //case 2: add link
     if (tokens[1] === "=") {
       if (tokens.length > 3) {
-        Tabash.stderr(
-          `Error: unexpected token "${tokens[3]}"`,
-          updateShellState
-        );
+        toStderr(`Error: unexpected token "${tokens[3]}"`, updateShellState);
         return;
       }
       const url = removeProtocol(tokens[2]);
@@ -60,7 +57,7 @@ const ShellWrapper = () => {
       updateShellState((draft) => {
         draft.links.push(link);
       });
-      Tabash.stdout(`${link.name} -> ${url}`, updateShellState);
+      toStdout(`${link.name} -> ${url}`, updateShellState);
       return;
     }
 
@@ -72,7 +69,7 @@ const ShellWrapper = () => {
     }
 
     // case 4: command not found
-    Tabash.stderr(`${tokens[0]}: command not found`, updateShellState);
+    toStderr(`${tokens[0]}: command not found`, updateShellState);
   };
   return (
     <>
