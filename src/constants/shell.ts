@@ -13,3 +13,6 @@ export const defaultLinks: Link[] = [
   { name: "jsh", url: "jiseophan.com" },
   { name: "gg", url: "google.com" },
 ];
+
+export const WHITESPACE = "\u00A0";
+export const TAB = WHITESPACE.repeat(4);

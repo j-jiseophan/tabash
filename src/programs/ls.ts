@@ -1,9 +1,8 @@
 import { Program, ProgramProps } from "../types/shell";
 import { toStdout } from "../utils/shell";
-const runLs = ({ shellState, updateShellState, args }: ProgramProps) => {
-  const outputMsg = shellState.links
-    .map((link) => link.name.trim())
-    .join("\u00A0\u00A0\u00A0\u00A0");
+import { TAB } from "../constants/shell";
+const runLs = ({ shellState, updateShellState }: ProgramProps) => {
+  const outputMsg = shellState.links.map((link) => link.name.trim()).join(TAB);
   toStdout(outputMsg, updateShellState);
   return;
 };

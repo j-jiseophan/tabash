@@ -1,0 +1,5 @@
+export enum SYMBOL_REPLACER_STATE {
+  START,
+  STRING,
+  SYMBOL,
+}
