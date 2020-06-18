@@ -9,4 +9,5 @@ export const HELP_MSGS = [
   `[key]=[url] # list [url] with [key]`,
   `[key] # open link`,
   "echo $[key] # print url for [key]",
+  "rm [key] # unregister link for [key]",
 ];
