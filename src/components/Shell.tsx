@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import "../styles/Shell.scss";
 import { rem2px } from "../utils/utils";
@@ -41,6 +41,13 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
           });
         }}
         onKeyDown={(e) => {
+          if (
+            e.key === "ArrowLeft" &&
+            (inputRef.current?.selectionStart || -1) <= consolePrefix.length
+          ) {
+            e.preventDefault();
+            return;
+          }
           if (e.key !== "Enter") {
             return;
           }
@@ -49,6 +56,7 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
             draft.inputValue = "";
           });
         }}
+        onMouseDown={(e) => e.preventDefault()}
         spellCheck={false}
       />
     </div>
