@@ -10,8 +10,10 @@ export const WELCOME_GUIDES = [
 export const consolePrefix = `joy@${browserName} $ `;
 
 export const defaultLinks: Link[] = [
-  { name: "jsh", url: "jiseophan.com" },
   { name: "gg", url: "google.com" },
+  { name: "gh", url: "github.com" },
+  { name: "jsh", url: "jiseophan.com" },
+  { name: "yt", url: "youtube.com" },
 ];
 
 export const WHITESPACE = "\u00A0";
