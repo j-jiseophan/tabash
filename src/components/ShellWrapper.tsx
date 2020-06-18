@@ -67,11 +67,21 @@ const ShellWrapper = () => {
         return;
       }
       const url = removeProtocol(tokens[2]);
+      const prevLink = shellState.links.find((link) => link.name === tokens[0]);
       const link: Link = { name: tokens[0], url };
-      updateShellState((draft) => {
-        draft.links.push(link);
-      });
+      if (prevLink) {
+        updateShellState((draft) => {
+          draft.links = draft.links.map((l) =>
+            l.name === tokens[0] ? link : l
+          );
+        });
+      } else {
+        updateShellState((draft) => {
+          draft.links.push(link);
+        });
+      }
       toStdout(`${link.name} -> ${url}`, updateShellState);
+
       return;
     }
 
