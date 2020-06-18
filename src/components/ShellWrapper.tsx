@@ -4,13 +4,17 @@ import Shell from "./Shell";
 import { tokenize } from "../utils/parser";
 import { programs } from "../constants/programs";
 import { ShellState, Link } from "../types/shell";
-import { defaultLinks, consolePrefix } from "../constants/shell";
+import {
+  defaultLinks,
+  consolePrefix,
+  WELCOME_GUIDES,
+} from "../constants/shell";
 import * as Tabash from "../utils/shell";
 import { removeProtocol } from "../utils/utils";
 
 const ShellWrapper = () => {
   const [shellState, updateShellState] = useImmer<ShellState>({
-    stdout: [],
+    stdout: WELCOME_GUIDES,
     inputValue: "",
     links: defaultLinks,
   });

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import "../styles/Shell.scss";
 import { rem2px } from "../utils/utils";
