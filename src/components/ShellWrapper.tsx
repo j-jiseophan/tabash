@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useImmer } from "use-immer";
 import Shell from "./Shell";
 import { tokenize } from "../utils/parser";
@@ -18,6 +18,20 @@ const ShellWrapper = () => {
     inputValue: "",
     links: defaultLinks,
   });
+
+  useEffect(() => {
+    const savedLinks = localStorage.getItem("links");
+    if (savedLinks) {
+      updateShellState((draft) => {
+        draft.links = JSON.parse(savedLinks);
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("links", JSON.stringify(shellState.links));
+  }, [shellState.links]);
+
   const runCommand = (command: string) => {
     const tokens = tokenize(command);
     const program = programs.find((program) => program.name === tokens[0]);
