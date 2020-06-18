@@ -1,6 +1,7 @@
 # tabash
+![banner](./src/assets/banner.png)
 
-a bash-like 'new tab' page for browser.
+tabash, a bash-like 'new tab' page for browser.
 
 ## Setup
 
