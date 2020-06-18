@@ -1,3 +1,5 @@
+import { breakerChars } from "../constants/parser";
+
 export const tokenize = (command: string) => {
   const tokens = [];
   let current = "";
@@ -9,12 +11,12 @@ export const tokenize = (command: string) => {
       } else {
         continue;
       }
-    } else if (c === "=") {
+    } else if (breakerChars.includes(c)) {
       if (current.length > 0) {
         tokens.push(current);
         current = "";
       }
-      tokens.push("=");
+      tokens.push(c);
     } else {
       current += c;
     }
