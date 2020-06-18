@@ -3,8 +3,8 @@ import { browserName } from "../utils/utils";
 import { version } from "../../package.json";
 
 export const WELCOME_GUIDES = [
-  `tabash ${version}`,
-  `Type "help" and check for avaliable commands 🪐`,
+  `🪐 tabash ${version}`,
+  `Type "help" and check for avaliable commands.`,
 ];
 
 export const consolePrefix = `joy@${browserName} $ `;
