@@ -1,8 +1,9 @@
 import { Program, ProgramProps } from "../types/shell";
-import { toStdout } from "../utils/shell";
+import { getStream } from "../utils/stream";
 import { HELP_MSGS } from "../constants/help";
 const runHelp = ({ updateShellState }: ProgramProps) => {
-  HELP_MSGS.forEach((msg) => toStdout(msg, updateShellState));
+  const stream = getStream(updateShellState);
+  HELP_MSGS.forEach((msg) => stream.writeStdout(msg));
   return;
 };
 

@@ -1,13 +1,14 @@
 import { Program, ProgramProps, Link } from "../types/shell";
 import { WHITESPACE } from "../constants/shell";
-import { toStdout } from "../utils/shell";
+import { getStream } from "../utils/stream";
 import { SYMBOL_REPLACER_STATE } from "../types/echo";
 
 const runEcho = ({ shellState, updateShellState, args }: ProgramProps) => {
   const msg = args
     .map((arg) => replaceSymbol(arg, shellState.links))
     .join(WHITESPACE);
-  toStdout(msg, updateShellState);
+  const stream = getStream(updateShellState);
+  stream.writeStdout(msg);
   return;
 };
 

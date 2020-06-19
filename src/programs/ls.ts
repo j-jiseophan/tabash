@@ -1,9 +1,10 @@
 import { Program, ProgramProps } from "../types/shell";
-import { toStdout } from "../utils/shell";
+import { getStream } from "../utils/stream";
 import { TAB } from "../constants/shell";
 const runLs = ({ shellState, updateShellState }: ProgramProps) => {
+  const stream = getStream(updateShellState);
   const outputMsg = shellState.links.map((link) => link.name.trim()).join(TAB);
-  toStdout(outputMsg, updateShellState);
+  stream.writeStdout(outputMsg);
   return;
 };
 

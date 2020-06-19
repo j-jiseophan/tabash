@@ -1,9 +1,10 @@
 import { Program, ProgramProps } from "../types/shell";
-import { toStderr } from "../utils/shell";
+import { getStream } from "../utils/stream";
 const runRm = ({ shellState, updateShellState, args }: ProgramProps) => {
+  const stream = getStream(updateShellState);
   if (args.length === 0) {
     const msg = "rm: missing operand";
-    toStderr(msg, updateShellState);
+    stream.writeStderr(msg);
     return;
   }
   args.forEach((arg) => {
@@ -15,7 +16,7 @@ const runRm = ({ shellState, updateShellState, args }: ProgramProps) => {
       return;
     }
     const msg = `rm: cannot remove '${arg}': No such key registered`;
-    toStderr(msg, updateShellState);
+    stream.writeStderr(msg);
   });
   return;
 };

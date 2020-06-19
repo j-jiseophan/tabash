@@ -9,7 +9,7 @@ import {
   consolePrefix,
   WELCOME_GUIDES,
 } from "../constants/shell";
-import { toStdout, toStderr } from "../utils/shell";
+import { getStream } from "../utils/stream";
 import { removeProtocol } from "../utils/utils";
 
 const ShellWrapper = () => {
@@ -18,6 +18,7 @@ const ShellWrapper = () => {
     inputValue: "",
     links: defaultLinks,
   });
+  const stream = getStream(updateShellState);
 
   useEffect(() => {
     const savedLinks = localStorage.getItem("links");
@@ -36,7 +37,7 @@ const ShellWrapper = () => {
     const tokens = tokenize(command);
     const program = programs.find((program) => program.name === tokens[0]);
 
-    toStdout(consolePrefix.concat(command), updateShellState);
+    stream.writeStdout(consolePrefix.concat(command));
 
     // case 0: empty string
     if (command.length === 0) {
@@ -46,10 +47,7 @@ const ShellWrapper = () => {
     // case 1: run program
     if (program) {
       if (tokens[1] === "=") {
-        toStderr(
-          `Error: '${tokens[0]}' is reserved for program`,
-          updateShellState
-        );
+        stream.writeStderr(`Error: '${tokens[0]}' is reserved for program`);
 
         return;
       }
@@ -63,7 +61,7 @@ const ShellWrapper = () => {
     //case 2: add link
     if (tokens[1] === "=") {
       if (tokens.length > 3) {
-        toStderr(`Error: unexpected token '${tokens[3]}'`, updateShellState);
+        stream.writeStderr(`Error: unexpected token '${tokens[3]}'`);
         return;
       }
       const url = removeProtocol(tokens[2]);
@@ -80,7 +78,7 @@ const ShellWrapper = () => {
           draft.links.push(link);
         });
       }
-      toStdout(`${link.name} -> ${url}`, updateShellState);
+      stream.writeStdout(`${link.name} -> ${url}`);
 
       return;
     }
@@ -93,7 +91,7 @@ const ShellWrapper = () => {
     }
 
     // case 4: command not found
-    toStderr(`${tokens[0]}: command not found`, updateShellState);
+    stream.writeStderr(`${tokens[0]}: command not found`);
   };
   return (
     <>
