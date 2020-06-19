@@ -1,7 +1,7 @@
 import { version } from "../../package.json";
 
 export const HELP_MSGS = [
-  `🪐 tabash ${version}`,
+  `tabash ${version}`,
   `a bash-like 'new tab' page for browser.`,
   `Visit https://github.com/jshan2017/tabash for details.`,
   `📕`,
@@ -10,4 +10,5 @@ export const HELP_MSGS = [
   `[key] # open link`,
   "echo $[key] # print url for [key]",
   "rm [key] # unregister link for [key]",
+  "mv [origin] [dest] # rename key from [origin] to [dest]",
 ];
