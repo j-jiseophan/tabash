@@ -26,7 +26,7 @@ const ShellWrapper = () => {
         draft.links = JSON.parse(savedLinks);
       });
     }
-  }, []);
+  }, [updateShellState]);
 
   useEffect(() => {
     localStorage.setItem("links", JSON.stringify(shellState.links));
