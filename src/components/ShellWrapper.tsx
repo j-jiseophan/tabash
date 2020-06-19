@@ -94,13 +94,11 @@ const ShellWrapper = () => {
     stream.writeStderr(`${tokens[0]}: command not found`);
   };
   return (
-    <>
-      <Shell
-        shellState={shellState}
-        updateShellState={updateShellState}
-        runCommand={runCommand}
-      />
-    </>
+    <Shell
+      shellState={shellState}
+      updateShellState={updateShellState}
+      runCommand={runCommand}
+    />
   );
 };
 
