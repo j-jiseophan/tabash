@@ -4,7 +4,7 @@ import githubLogo from "../assets/GitHub-Mark-32px.png";
 const Header = () => {
   return (
     <div className="app-header">
-      tabash
+      🪐 tabash
       <a href="https://github.com/jshan2017/tabash">
         <img src={githubLogo} alt="visit github" />
       </a>
