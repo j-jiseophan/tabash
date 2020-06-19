@@ -1,9 +1,9 @@
 import { Program, ProgramProps } from "../types/shell";
-import { toStdout, toStderr } from "../utils/shell";
+import { toStderr } from "../utils/shell";
 const runRm = ({ shellState, updateShellState, args }: ProgramProps) => {
   if (args.length === 0) {
     const msg = "rm: missing operand";
-    toStdout(msg, updateShellState);
+    toStderr(msg, updateShellState);
     return;
   }
   args.forEach((arg) => {
