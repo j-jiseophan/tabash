@@ -47,7 +47,7 @@ const ShellWrapper = () => {
     if (program) {
       if (tokens[1] === "=") {
         toStderr(
-          `Error: "${tokens[0]}" is reserved for program`,
+          `Error: '${tokens[0]}' is reserved for program`,
           updateShellState
         );
 
@@ -63,7 +63,7 @@ const ShellWrapper = () => {
     //case 2: add link
     if (tokens[1] === "=") {
       if (tokens.length > 3) {
-        toStderr(`Error: unexpected token "${tokens[3]}"`, updateShellState);
+        toStderr(`Error: unexpected token '${tokens[3]}'`, updateShellState);
         return;
       }
       const url = removeProtocol(tokens[2]);
