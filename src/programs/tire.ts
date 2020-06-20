@@ -1,5 +1,6 @@
 import { Program, ProgramProps } from "../types/shell";
 import { getStream } from "../utils/stream";
+import { PACAKGE_PREFIX } from "../constants/programs";
 const runTire = async ({ updateShellState, args }: ProgramProps) => {
   const stream = getStream(updateShellState);
   if (args.length !== 2 || args[0] !== "install") {
@@ -8,7 +9,7 @@ const runTire = async ({ updateShellState, args }: ProgramProps) => {
     return;
   }
   const packageName = args[1];
-  if (localStorage.getItem(packageName)) {
+  if (localStorage.getItem(`${PACAKGE_PREFIX}${packageName}`)) {
     const msg = `Error: ${packageName} is already installed`;
     stream.writeStderr(msg);
     return;
@@ -25,7 +26,7 @@ const runTire = async ({ updateShellState, args }: ProgramProps) => {
       return;
     }
     const code = await res.text();
-    localStorage.setItem(packageName, code);
+    localStorage.setItem(`${PACAKGE_PREFIX}${packageName}`, code);
     const msg = "Done!";
     stream.writeStdout(msg);
   } catch {
