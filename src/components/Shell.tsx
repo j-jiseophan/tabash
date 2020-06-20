@@ -68,6 +68,7 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
                 draft.stdout.length - 1
               );
             });
+            return;
           }
           if (e.key === "ArrowDown") {
             e.preventDefault();
@@ -83,16 +84,17 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
                 0
               );
             });
-          }
-          if (e.key !== "Enter") {
             return;
           }
-          updateShellState((draft) => {
-            draft.stdin.currentValue = "";
-            draft.stdin.historyBackIndex = 0;
-            draft.stdin.history.push(shellState.stdin.currentValue);
-          });
-          runCommand(shellState.stdin.currentValue);
+          if (e.key === "Enter") {
+            updateShellState((draft) => {
+              draft.stdin.currentValue = "";
+              draft.stdin.historyBackIndex = 0;
+              draft.stdin.history.push(shellState.stdin.currentValue);
+            });
+            runCommand(shellState.stdin.currentValue);
+            return;
+          }
         }}
         onMouseDown={(e) => e.preventDefault()}
         spellCheck={false}
