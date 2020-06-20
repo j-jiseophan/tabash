@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useImmer } from "use-immer";
 import Shell from "./Shell";
-import { tokenize } from "../utils/parser";
+import { parseCommand } from "../utils/parser";
 import { programs } from "../constants/programs";
 import { ShellState, Link } from "../types/shell";
 import {
@@ -34,7 +34,7 @@ const ShellWrapper = () => {
   }, [shellState.links]);
 
   const runCommand = (command: string) => {
-    const tokens = tokenize(command);
+    const tokens = parseCommand(command, shellState.links);
     const program = programs.find((program) => program.name === tokens[0]);
 
     stream.writeStdout(consolePrefix.concat(command));
