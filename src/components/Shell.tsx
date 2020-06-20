@@ -65,7 +65,7 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
                 ] || "";
               draft.stdin.historyBackIndex = Math.min(
                 draft.stdin.historyBackIndex + 1,
-                draft.stdout.length - 1
+                draft.stdin.history.length - 1
               );
             });
             return;
@@ -77,7 +77,7 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
                 draft.stdin.history[
                   draft.stdin.history.length -
                     1 -
-                    (draft.stdin.historyBackIndex - 2)
+                    (draft.stdin.historyBackIndex - 1)
                 ] || "";
               draft.stdin.historyBackIndex = Math.max(
                 draft.stdin.historyBackIndex - 1,
