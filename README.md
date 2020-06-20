@@ -6,7 +6,7 @@ tabash, a bash-like 'new tab' page for browser.
 
 ## Setup
 
-install
+install packages
 
 ```Shell
 yarn
@@ -40,7 +40,12 @@ open link (github)
 gh
 ```
 
+install package from [tire](https://github.com/jshan2017/tire) (alarm)
+
+```Shell
+tire install alarm
+```
+
 ## Future of tabash
 
-- Chrome/Edge extension
-- tpm, tabash package manager
+- Chrome/Edge extension (soon)
