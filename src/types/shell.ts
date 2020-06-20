@@ -22,6 +22,10 @@ export interface ProgramProps {
   args: string[];
 }
 
+export interface EvalProgramProps extends ProgramProps {
+  packageName: string;
+}
+
 export interface Program {
   name: string;
   run: (props: ProgramProps) => void;
