@@ -1,6 +1,6 @@
 import { breakerChars } from "../constants/parser";
 import { Link } from "../types/shell";
-import { SYMBOL_REPLACER_STATE } from "../types/parser";
+import { SYMBOL_REPLACER_STATE as SYMBOL_MAPPER_STATE } from "../types/parser";
 
 export const parseCommand = (command: string, links: Link[]) => {
   const tokens = tokenize(command);
@@ -36,33 +36,33 @@ export const tokenize = (command: string) => {
 };
 
 export const mapSymbol = (token: string, links: Link[]) => {
-  let state: SYMBOL_REPLACER_STATE = SYMBOL_REPLACER_STATE.START;
+  let state: SYMBOL_MAPPER_STATE = SYMBOL_MAPPER_STATE.START;
   let s = "";
   const results = [];
   for (const c of token) {
-    switch (state as SYMBOL_REPLACER_STATE) {
-      case SYMBOL_REPLACER_STATE.START: {
+    switch (state as SYMBOL_MAPPER_STATE) {
+      case SYMBOL_MAPPER_STATE.START: {
         if (c === "$") {
-          state = SYMBOL_REPLACER_STATE.SYMBOL;
+          state = SYMBOL_MAPPER_STATE.SYMBOL;
         } else {
-          state = SYMBOL_REPLACER_STATE.STRING;
+          state = SYMBOL_MAPPER_STATE.STRING;
           s += c;
         }
         break;
       }
-      case SYMBOL_REPLACER_STATE.STRING: {
+      case SYMBOL_MAPPER_STATE.STRING: {
         if (c === "$") {
           results.push(s);
           s = "";
-          state = SYMBOL_REPLACER_STATE.SYMBOL;
+          state = SYMBOL_MAPPER_STATE.SYMBOL;
         } else {
           s += c;
         }
         break;
       }
-      case SYMBOL_REPLACER_STATE.SYMBOL: {
+      case SYMBOL_MAPPER_STATE.SYMBOL: {
         if (c === "$") {
-          state = SYMBOL_REPLACER_STATE.SYMBOL;
+          state = SYMBOL_MAPPER_STATE.SYMBOL;
           const url = links.find((link) => link.name === s)?.url || "";
           results.push(url);
           s = "";
@@ -74,9 +74,9 @@ export const mapSymbol = (token: string, links: Link[]) => {
     }
   }
   if (s.length > 0) {
-    if (state === SYMBOL_REPLACER_STATE.STRING) {
+    if (state === SYMBOL_MAPPER_STATE.STRING) {
       results.push(s);
-    } else if (state === SYMBOL_REPLACER_STATE.SYMBOL) {
+    } else if (state === SYMBOL_MAPPER_STATE.SYMBOL) {
       const url = links.find((link) => link.name === s)?.url || "";
       results.push(url);
     }
