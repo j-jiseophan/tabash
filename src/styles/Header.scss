@@ -1,8 +1,8 @@
 .app-header {
   background-color: #c7c7c7;
   width: 50%;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: 1.2rem;
@@ -10,14 +10,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  a {
-    height: 70%;
+  .header-buttons {
+    display: flex;
+    align-items: center;
 
-    img {
-      height: 100%;
-      cursor: pointer;
-      &:hover {
-        opacity: 0.5;
+    a {
+      height: 1.3rem;
+
+      img {
+        height: 100%;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.5;
+        }
       }
     }
   }
