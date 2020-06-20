@@ -86,6 +86,19 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
             });
             return;
           }
+          if (e.key === "Tab" && shellState.stdin.currentValue.length > 0) {
+            e.preventDefault();
+            const link = shellState.links.find((link) =>
+              link.name.startsWith(shellState.stdin.currentValue)
+            );
+            if (!link) {
+              return;
+            }
+            updateShellState((draft) => {
+              draft.stdin.currentValue = link.name;
+            });
+            return;
+          }
           if (e.key === "Enter") {
             updateShellState((draft) => {
               draft.stdin.currentValue = "";
