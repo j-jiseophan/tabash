@@ -41,11 +41,11 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
 
       <input
         ref={inputRef}
-        value={`${consolePrefix}${shellState.inputValue}`}
+        value={`${consolePrefix}${shellState.stdin.currentValue}`}
         onChange={(e) => {
           const inputValue = e.target.value.substring(consolePrefix.length);
           updateShellState((draft) => {
-            draft.inputValue = inputValue;
+            draft.stdin.currentValue = inputValue;
           });
         }}
         onKeyDown={(e) => {
@@ -56,13 +56,43 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
             e.preventDefault();
             return;
           }
+          if (e.key === "ArrowUp") {
+            e.preventDefault();
+            updateShellState((draft) => {
+              draft.stdin.currentValue =
+                draft.stdin.history[
+                  draft.stdin.history.length - 1 - draft.stdin.historyBackIndex
+                ] || "";
+              draft.stdin.historyBackIndex = Math.min(
+                draft.stdin.historyBackIndex + 1,
+                draft.stdout.length - 1
+              );
+            });
+          }
+          if (e.key === "ArrowDown") {
+            e.preventDefault();
+            updateShellState((draft) => {
+              draft.stdin.currentValue =
+                draft.stdin.history[
+                  draft.stdin.history.length -
+                    1 -
+                    (draft.stdin.historyBackIndex - 2)
+                ] || "";
+              draft.stdin.historyBackIndex = Math.max(
+                draft.stdin.historyBackIndex - 1,
+                0
+              );
+            });
+          }
           if (e.key !== "Enter") {
             return;
           }
-          runCommand(shellState.inputValue);
           updateShellState((draft) => {
-            draft.inputValue = "";
+            draft.stdin.currentValue = "";
+            draft.stdin.historyBackIndex = 0;
+            draft.stdin.history.push(shellState.stdin.currentValue);
           });
+          runCommand(shellState.stdin.currentValue);
         }}
         onMouseDown={(e) => e.preventDefault()}
         spellCheck={false}

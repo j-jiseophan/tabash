@@ -15,7 +15,11 @@ import { removeProtocol } from "../utils/utils";
 const ShellWrapper = () => {
   const [shellState, updateShellState] = useImmer<ShellState>({
     stdout: WELCOME_GUIDES,
-    inputValue: "",
+    stdin: {
+      currentValue: "",
+      history: [],
+      historyBackIndex: 0,
+    },
     links: defaultLinks,
   });
   const stream = getStream(updateShellState);

@@ -1,7 +1,13 @@
 export interface ShellState {
   stdout: string[];
-  inputValue: string;
+  stdin: Stdin;
   links: Link[];
+}
+
+export interface Stdin {
+  history: string[];
+  currentValue: string;
+  historyBackIndex: number;
 }
 
 export interface ShellProps {
