@@ -12,7 +12,6 @@ export const consolePrefix = `joy@${browserName} $ `;
 export const defaultLinks: Link[] = [
   { name: "gg", url: "google.com" },
   { name: "gh", url: "github.com" },
-  { name: "jsh", url: "jiseophan.com" },
   { name: "yt", url: "youtube.com" },
 ];
 
