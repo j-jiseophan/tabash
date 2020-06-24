@@ -11,5 +11,6 @@ export const HELP_MSGS = [
   "echo $[key] # print url for [key]",
   "rm [key] # unregister link for [key]",
   "mv [origin] [dest] # rename key from [origin] to [dest]",
+  "clear # clear shell",
   "tire install [name] # install package from tire",
 ];
