@@ -32,9 +32,9 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
       >
         {shellState.stdout.map((msg: string, index: number) => {
           return (
-            <div className="stdout" key={index}>
+            <p className="stdout" key={index}>
               {msg}
-            </div>
+            </p>
           );
         })}
       </Scrollbars>

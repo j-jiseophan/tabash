@@ -16,4 +16,4 @@ export const defaultLinks: Link[] = [
 ];
 
 export const WHITESPACE = "\u00A0";
-export const TAB = WHITESPACE.repeat(4);
+export const TAB = `\u00A0 \u00A0 `;
