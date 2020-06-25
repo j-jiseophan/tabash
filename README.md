@@ -1,5 +1,3 @@
-![banner](./src/assets/banner.png)
-
 # tabash
 ![screenshot](./public/tabash-screenshot.jpg)
 tabash, a bash-like 'new tab' page for browser.
