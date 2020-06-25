@@ -1,7 +1,7 @@
 {
   "name": "tabash",
-  "description": "a bash-like 'new-tab' page for brwoser",
-  "version": "0.5.2",
+  "description": "a bash-like 'new-tab' page for browser",
+  "version": "0.6.0",
   "incognito": "split",
   "chrome_url_overrides": {
     "newtab": "index.html"
