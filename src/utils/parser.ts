@@ -1,4 +1,3 @@
-import { breakerChars } from "../constants/parser";
 import { Link } from "../types/shell";
 import { SYMBOL_REPLACER_STATE as SYMBOL_MAPPER_STATE } from "../types/parser";
 
@@ -11,6 +10,7 @@ export const parseCommand = (command: string, links: Link[]) => {
 export const tokenize = (command: string) => {
   const tokens = [];
   let current = "";
+  let breakOnEqual = true;
   for (const c of command) {
     if (/\s/.test(c)) {
       if (current.length > 0) {
@@ -19,12 +19,13 @@ export const tokenize = (command: string) => {
       } else {
         continue;
       }
-    } else if (breakerChars.includes(c)) {
+    } else if (c === "=" && breakOnEqual) {
       if (current.length > 0) {
         tokens.push(current);
         current = "";
       }
       tokens.push(c);
+      breakOnEqual = false;
     } else {
       current += c;
     }
