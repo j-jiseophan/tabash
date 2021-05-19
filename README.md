@@ -2,7 +2,7 @@
 ![screenshot](./public/tabash-screenshot.jpg)
 tabash, a bash-like 'new tab' page for browser.
 
-## Chrome / Edge extension
+## Download
 [Chrome Webstore](https://chrome.google.com/webstore/detail/tabash/jpcolfmebaaehfnfhbkjhaopoelkjgni?hl=ko&authuser=0)
 
 ## Setup
@@ -21,28 +21,28 @@ yarn start
 
 ## Examples
 
-> type "help" in tabash for more infos
+> type "help" in tabash for more info
 
 list registered links
 
 ```Shell
-ls
+$ ls
 ```
 
-register link
+register the link
 
 ```Shell
-gh=github.com
+$ gh=github.com
 ```
 
-open link (github)
+open the link (github)
 
 ```Shell
-gh
+$ gh
 ```
 
-install package from [tire](https://github.com/jshan2017/tire) (alarm)
+install a package from [tire](https://github.com/jshan2017/tire) (alarm, for example)
 
 ```Shell
-tire install alarm
+$ tire install alarm
 ```
