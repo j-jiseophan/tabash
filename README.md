@@ -4,8 +4,6 @@ tabash, a bash-like 'new tab' page for browser.
 
 ## Chrome / Edge extension
 [Chrome Webstore](https://chrome.google.com/webstore/detail/tabash/jpcolfmebaaehfnfhbkjhaopoelkjgni?hl=ko&authuser=0)
-- From Chrome 75, unofficial extensions are not allowed and only webstore extensions are.
-- Now waiting for publisher review for Edge🔥🔥
 
 ## Setup
 
