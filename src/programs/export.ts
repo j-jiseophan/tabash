@@ -5,7 +5,7 @@ import { format } from "date-fns";
 const runExport = ({ updateShellState, args }: ProgramProps) => {
   const data =
     "text/json;charset=utf-8," +
-    encodeURIComponent(JSON.stringify(localStorage.getItem("links")));
+    encodeURIComponent(localStorage.getItem("links") as string);
   const url = "data:" + data;
   const date = format(new Date(), "yyyy-MM-dd");
 
@@ -15,6 +15,7 @@ const runExport = ({ updateShellState, args }: ProgramProps) => {
   a.download = `tabash-${date}.json`;
   document.body.appendChild(a);
   a.click();
+  a.remove();
   window.URL.revokeObjectURL(url);
   const stream = getStream(updateShellState);
   stream.writeStdout("json file downloaded");

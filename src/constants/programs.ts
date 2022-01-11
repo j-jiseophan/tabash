@@ -7,6 +7,7 @@ import mv from "../programs/mv";
 import tire from "../programs/tire";
 import clear from "../programs/clear";
 import xport from "../programs/export";
+import mport from "../programs/import";
 import google from "../programs/google";
 
 export const programs: Program[] = [
@@ -18,6 +19,7 @@ export const programs: Program[] = [
   tire,
   clear,
   xport,
+  mport,
   google,
 ];
 

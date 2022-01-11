@@ -13,6 +13,7 @@ export const HELP_MSGS = [
   "mv [origin] [dest] # rename key from [origin] to [dest]",
   "clear # clear shell",
   "export # export links to json file",
+  "import # import links from json file",
   "g [keyywords] # search google for [keyywords]",
   "tire install [name] # install package from tire",
 ];
