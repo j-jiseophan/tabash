@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useContext } from "react";
 import classnames from "classnames";
 import { Scrollbars } from "react-custom-scrollbars";
 import "../styles/Shell.scss";
-import { parseQueryString, rem2px } from "../utils/utils";
+import { rem2px } from "../utils/utils";
 import { consolePrefix } from "../constants/shell";
 import { ShellProps } from "../types/shell";
 import { ThemeContext } from "../contexts/theme";
@@ -17,15 +17,6 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
   }, [shellState.stdout]);
 
   useEffect(() => {
-    const queryParams = parseQueryString();
-    const focused = queryParams["focus"];
-    if (!focused) {
-      chrome.tabs.create({
-        url: chrome.extension.getURL("/index.html?focus=true"),
-      });
-      window.close();
-      return;
-    }
     inputRef.current?.focus();
   }, []);
 
