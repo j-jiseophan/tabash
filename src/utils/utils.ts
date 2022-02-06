@@ -10,9 +10,3 @@ export const browserName = Bowser.getParser(window.navigator.userAgent)
 
 export const removeProtocol = (url: string) =>
   url.replace(/^http(s?):\/\//i, "");
-
-export const parseQueryString = ()=>{
-  const urlSearchParams = new URLSearchParams(window.location.search);
-  const params = Object.fromEntries(urlSearchParams.entries());
-  return params
-}
