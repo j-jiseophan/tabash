@@ -11,12 +11,22 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollerRef = useRef<Scrollbars>(null);
   const { isDarkMode } = useContext(ThemeContext);
+
   useEffect(() => {
     scrollerRef.current?.scrollToBottom();
   }, [shellState.stdout]);
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
+
+
+  useEffect(()=>{
+    document.addEventListener("keydown", (e) => {
+      if (e.altKey && e.key === "x") {
+        e.preventDefault();
+        e.stopPropagation();
+        inputRef.current?.focus();
+      }
+    })
+  },[])
+
   return (
     <div
       className={classnames("shell", {
