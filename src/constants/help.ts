@@ -15,5 +15,4 @@ export const HELP_MSGS = [
   "export # export links to json file",
   "import # import links from json file",
   "g [keyywords] # search google for [keyywords]",
-  "tire install [name] # install package from tire",
 ];

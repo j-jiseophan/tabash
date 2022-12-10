@@ -16,7 +16,7 @@ export const programs: Program[] = [
   help,
   rm,
   mv,
-  tire,
+  // tire, // tire is unavailable from Manifest V3
   clear,
   xport,
   mport,

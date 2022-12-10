@@ -41,8 +41,6 @@ open the link (github)
 $ gh
 ```
 
-install a package from [tire](https://github.com/jshan2017/tire) (alarm, for example)
+~~install a package from [tire](https://github.com/jshan2017/tire) (alarm, for example)~~
+tire is deprecated since it's unavailable in Manifest V3
 
-```Shell
-$ tire install alarm
-```
