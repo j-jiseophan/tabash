@@ -1,5 +1,5 @@
 # tabash
-![screenshot](./public/tabash-screenshot.png)
+![screenshot](./public/tabash-screenshot.jpg)
 tabash, a bash-like 'new tab' page for browser.
 
 ## Download
