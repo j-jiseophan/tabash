@@ -3,7 +3,7 @@
 tabash, a bash-like 'new tab' page for browser.
 
 ## Download
-[Chrome Webstore](https://chrome.google.com/webstore/detail/tabash/jpcolfmebaaehfnfhbkjhaopoelkjgni?hl=ko&authuser=0)
+Since tabash does not follow Chrome Web Store's updated policy, you should download the source code and load it as an unpacked extension. Don't worry. It's easy.
 
 ## Setup
 
@@ -19,6 +19,17 @@ start
 yarn start
 ```
 
+build
+
+```Shell
+yarn build
+```
+
+load as an unpacked extension
+
+```
+Chrome > More tools > Extensions > Load unpacked > select the build directory
+```
 ## Examples
 
 > type "help" in tabash for more info
