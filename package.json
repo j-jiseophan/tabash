@@ -1,6 +1,6 @@
 {
   "name": "tabash",
-  "version": "0.8.4",
+  "version": "0.9.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
