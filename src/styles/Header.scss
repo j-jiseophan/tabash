@@ -1,28 +1,83 @@
 .app-header {
-  background-color: #c7c7c7;
+  background: linear-gradient(180deg, #3a3a3a 0%, #2a2a2a 100%);
   width: 50%;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 1.2rem;
-  border-radius: 5px 5px 0 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 8px 8px 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #1a1a1a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+  &.light {
+    background: linear-gradient(180deg, #e8e8e8 0%, #d0d0d0 100%);
+    border-bottom: 1px solid #b0b0b0;
+
+    .title {
+      color: #333;
+    }
+
+    .header-buttons a img {
+      filter: none;
+    }
+  }
+
+  .title {
+    color: #e0e0e0;
+    font-family: "Noto Sans Mono", monospace;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  // macOS style window buttons
+  .window-buttons {
+    display: flex;
+    gap: 8px;
+    margin-right: 12px;
+
+    span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+
+      &.close {
+        background-color: #ff5f56;
+        border: 1px solid #e0443e;
+      }
+      &.minimize {
+        background-color: #ffbd2e;
+        border: 1px solid #dea123;
+      }
+      &.maximize {
+        background-color: #27c93f;
+        border: 1px solid #1aab29;
+      }
+    }
+  }
+
   .header-buttons {
     display: flex;
     align-items: center;
+    gap: 12px;
 
     a {
-      height: 1.3rem;
+      height: 1.2rem;
+      opacity: 0.7;
+      transition: opacity 0.2s ease;
 
       img {
         height: 100%;
         cursor: pointer;
-        &:hover {
-          opacity: 0.5;
-        }
+        filter: brightness(0) invert(1);
+      }
+
+      &:hover {
+        opacity: 1;
       }
     }
   }

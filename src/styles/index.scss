@@ -1,25 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;700&display=swap');
+
 body {
   margin: 0;
-  font-family: "Cascadia Code";
+  font-family: "Noto Sans Mono", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Noto Sans Mono", monospace;
 }
 
 #root {
   height: 100vh;
   background: url("/bg-tabash.jpg") no-repeat center;
   background-size: cover;
-}
-
-@font-face {
-  font-family: "Cascadia Code";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../assets//CascadiaCode.ttf") format("truetype"),
-    url("../assets//CascadiaCode.woff2") format("woff2");
 }
