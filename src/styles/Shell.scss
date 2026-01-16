@@ -15,6 +15,31 @@
     input {
       caret-color: #3760bf;
     }
+
+    .shell-output {
+      &::-webkit-scrollbar-thumb {
+        background-color: #b0b4c0;
+      }
+    }
+  }
+
+  .shell-output {
+    overflow-y: auto;
+    width: 100%;
+    max-height: 26.7rem;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #414868;
+      border-radius: 4px;
+    }
   }
 
   input {

@@ -1,19 +1,19 @@
 import React, { useEffect, useRef, useContext } from "react";
 import classnames from "classnames";
-import { Scrollbars } from "react-custom-scrollbars";
 import "../styles/Shell.scss";
-import { rem2px } from "../utils/utils";
 import { consolePrefix } from "../constants/shell";
 import { ShellProps } from "../types/shell";
 import { ThemeContext } from "../contexts/theme";
 
 const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const scrollerRef = useRef<Scrollbars>(null);
+  const scrollerRef = useRef<HTMLDivElement>(null);
   const { isDarkMode } = useContext(ThemeContext);
 
   useEffect(() => {
-    scrollerRef.current?.scrollToBottom();
+    if (scrollerRef.current) {
+      scrollerRef.current.scrollTop = scrollerRef.current.scrollHeight;
+    }
   }, [shellState.stdout]);
 
 
@@ -34,11 +34,9 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
       })}
       onClick={() => inputRef.current?.focus()}
     >
-      <Scrollbars
+      <div
         ref={scrollerRef}
-        autoHeight
-        autoHeightMax={rem2px(26.7)}
-        style={{ width: "100%" }}
+        className="shell-output"
       >
         {shellState.stdout.map((msg: string, index: number) => {
           return (
@@ -47,7 +45,7 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
             </p>
           );
         })}
-      </Scrollbars>
+      </div>
 
       <input
         ref={inputRef}
