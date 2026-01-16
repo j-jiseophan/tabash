@@ -11,5 +11,33 @@
     "48": "logo48.png",
     "128": "logo128.png"
   },
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "commands": {
+    "open-command-palette": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+D",
+        "mac": "Command+Shift+D"
+      },
+      "description": "Open command palette"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content/commandPalette.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
   "manifest_version": 3
 }

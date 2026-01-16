@@ -38,6 +38,10 @@ const ShellWrapper = () => {
 
   useEffect(() => {
     localStorage.setItem("links", JSON.stringify(shellState.links));
+    // sync to chrome.storage.local for content script access
+    if (typeof chrome !== "undefined" && chrome.storage?.local) {
+      chrome.storage.local.set({ links: shellState.links });
+    }
   }, [shellState.links]);
 
   const runCommand = (command: string) => {
