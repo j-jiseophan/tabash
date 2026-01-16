@@ -1,35 +1,50 @@
 .shell {
-  width: 50%;
-  height: 28rem;
-  background-color: #1a1b26;
-  color: #7dcfff;
-  padding: 1rem;
+  width: 640px;
+  max-width: 90vw;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(30, 30, 32, 0.98) 0%, rgba(24, 24, 26, 0.98) 100%);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 12px 12px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 8px 40px rgba(0, 0, 0, 0.6),
+    0 0 80px rgba(255, 90, 95, 0.08);
 
   &.light {
-    background-color: #e5e6eb;
-    color: #3760bf;
+    background: linear-gradient(135deg, rgba(250, 250, 252, 0.98) 0%, rgba(245, 245, 247, 0.98) 100%);
+    color: rgba(0, 0, 0, 0.85);
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.08),
+      0 8px 40px rgba(0, 0, 0, 0.15),
+      0 0 80px rgba(255, 90, 95, 0.05);
 
     input {
-      caret-color: #3760bf;
+      caret-color: rgba(255, 90, 95, 0.8);
+      color: rgba(0, 0, 0, 0.85);
     }
 
     .shell-output {
       &::-webkit-scrollbar-thumb {
-        background-color: #b0b4c0;
+        background-color: rgba(0, 0, 0, 0.15);
       }
+    }
+
+    .stdout {
+      color: rgba(0, 0, 0, 0.7);
     }
   }
 
   .shell-output {
     overflow-y: auto;
     width: 100%;
-    max-height: 26.7rem;
+    flex: 1;
+    padding-right: 8px;
 
     &::-webkit-scrollbar {
-      width: 8px;
+      width: 6px;
     }
 
     &::-webkit-scrollbar-track {
@@ -37,31 +52,40 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: #414868;
-      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
     }
   }
 
   input {
-    color: inherit;
+    color: rgba(255, 255, 255, 0.95);
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 0.95rem;
-    height: 1.4rem;
+    font-size: 14px;
+    font-weight: 400;
+    height: 1.6rem;
     font-family: "Noto Sans Mono", monospace;
-    letter-spacing: 0.5px;
-    caret-color: #7dcfff;
+    letter-spacing: 0.3px;
+    caret-color: rgba(255, 90, 95, 0.8);
+    padding: 8px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 8px;
   }
 
   .stdout {
-    margin: 0.3rem 0;
+    margin: 4px 0;
     min-height: 1.2rem;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    line-height: 1.4;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
     word-break: break-word;
     white-space: pre-wrap;
     tab-size: 4;
+    color: rgba(255, 255, 255, 0.7);
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
