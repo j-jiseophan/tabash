@@ -1,31 +1,31 @@
 # tabash
 ![screenshot](./public/tabash-screenshot.jpg)
-tabash, a bash-like 'new tab' page for browser.
+tabash, a bash-like 'new tab' page for your browser.
 
 ## Download
 Since tabash does not follow Chrome Web Store's updated policy, you should download the source code and load it as an unpacked extension. Don't worry. It's easy.
 
 ## Setup
 
-install packages
+Install packages
 
 ```Shell
-yarn
+npm i
 ```
 
-start
+Start (Development)
 
 ```Shell
-yarn start
+npm run dev
 ```
 
-build
+Build
 
 ```Shell
-yarn build
+npm run build
 ```
 
-load as an unpacked extension
+Load as an unpacked extension
 
 ```
 Chrome > More tools > Extensions > Load unpacked > select the build directory
