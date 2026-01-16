@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { useImmer } from "use-immer";
 import Shell from "./Shell";
 import { parseCommand } from "../utils/parser";
@@ -12,8 +12,10 @@ import {
 import { getStream } from "../utils/stream";
 import { removeProtocol } from "../utils/utils";
 import runEval from "../programs/eval";
+import { ThemeContext } from "../contexts/theme";
 
 const ShellWrapper = () => {
+  const { setCustomWallpaper } = useContext(ThemeContext);
   const [shellState, updateShellState] = useImmer<ShellState>({
     stdout: WELCOME_GUIDES,
     stdin: {
@@ -59,6 +61,7 @@ const ShellWrapper = () => {
         shellState,
         updateShellState,
         args: tokens.slice(1),
+        setCustomWallpaper,
       });
       return;
     }

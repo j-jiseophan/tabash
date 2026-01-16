@@ -18,7 +18,7 @@ const Header = () => {
       <span className="title">tabash</span>
       <div className="header-buttons">
         <DarkModeButton />
-        <a href="https://github.com/jshan2017/tabash">
+        <a href="https://github.com/j-jiseophan/tabash">
           <img src={githubLogo} alt="visit github" />
         </a>
       </div>

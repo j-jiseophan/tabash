@@ -20,6 +20,7 @@ export interface ProgramProps {
   shellState: ShellState;
   updateShellState: UpdateShellState;
   args: string[];
+  setCustomWallpaper?: (url: string | null) => void;
 }
 
 export interface EvalProgramProps extends ProgramProps {

@@ -35,4 +35,14 @@
       opacity: 1;
     }
   }
+
+  &.custom-wallpaper {
+    &::before {
+      background-image: var(--custom-wallpaper);
+      opacity: 1;
+    }
+    &::after {
+      opacity: 0;
+    }
+  }
 }

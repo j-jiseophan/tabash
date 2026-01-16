@@ -18,7 +18,7 @@ const runTire = async ({ updateShellState, args }: ProgramProps) => {
   stream.writeStdout(msg);
   try {
     const res = await fetch(
-      `https://raw.githubusercontent.com/jshan2017/tire/master/packages/${packageName}.js`
+      `https://raw.githubusercontent.com/j-jiseophan/tire/master/packages/${packageName}.js`
     );
     if (res.status === 404) {
       const msg = `Error: failed to install ${packageName}, package not found.`;

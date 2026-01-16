@@ -6,10 +6,20 @@ import ShellWrapper from "./ShellWrapper";
 import { ThemeProvider, ThemeContext } from "../contexts/theme";
 
 function AppContent() {
-  const { isDarkMode } = useContext(ThemeContext);
+  const { isDarkMode, customWallpaper } = useContext(ThemeContext);
 
   return (
-    <div className={classnames("App", { light: !isDarkMode })}>
+    <div
+      className={classnames("App", {
+        light: !isDarkMode,
+        "custom-wallpaper": !!customWallpaper,
+      })}
+      style={
+        customWallpaper
+          ? { "--custom-wallpaper": `url(${customWallpaper})` } as React.CSSProperties
+          : undefined
+      }
+    >
       <Header />
       <ShellWrapper />
     </div>
