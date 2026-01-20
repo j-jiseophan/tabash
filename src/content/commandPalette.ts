@@ -164,7 +164,7 @@ class CommandPalette {
         }
         .tabash-palette-item {
           padding: 10px 12px;
-          cursor: default;
+          cursor: pointer;
           display: flex;
           align-items: center;
           gap: 12px;
@@ -353,19 +353,31 @@ class CommandPalette {
       .join("");
 
     this.list.querySelectorAll(".tabash-palette-item").forEach((item) => {
-      item.addEventListener("click", () => {
+      item.addEventListener("click", (e) => {
+        e.stopPropagation();
         const index = parseInt(item.getAttribute("data-index") || "0", 10);
         this.goToLink(this.filteredLinks[index]);
       });
       item.addEventListener("mouseenter", () => {
         const index = parseInt(item.getAttribute("data-index") || "0", 10);
         this.selectedIndex = index;
-        this.renderList();
+        this.updateSelection();
       });
     });
 
     const selectedElement = this.list.children[this.selectedIndex] as HTMLElement;
     selectedElement?.scrollIntoView({ block: "nearest" });
+  }
+
+  private updateSelection() {
+    if (!this.list) return;
+    this.list.querySelectorAll(".tabash-palette-item").forEach((item, index) => {
+      if (index === this.selectedIndex) {
+        item.classList.add("selected");
+      } else {
+        item.classList.remove("selected");
+      }
+    });
   }
 
   private escapeHtml(text: string): string {
@@ -376,7 +388,8 @@ class CommandPalette {
 
   private goToLink(link: Link) {
     this.close();
-    window.location.href = `https://${link.url}`;
+    const url = link.url.startsWith('http') ? link.url : `https://${link.url}`;
+    window.location.href = url;
   }
 }
 
