@@ -107,7 +107,7 @@ const Shell = ({ shellState, updateShellState, runCommand }: ShellProps) => {
             });
             return;
           }
-          if (e.key === "Enter") {
+          if (e.key === "Enter" && !e.nativeEvent.isComposing) {
             updateShellState((draft) => {
               draft.stdin.currentValue = "";
               draft.stdin.historyBackIndex = 0;

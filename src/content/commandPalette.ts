@@ -324,7 +324,7 @@ class CommandPalette {
       this.renderList();
       return;
     }
-    if (e.key === "Enter" && this.filteredLinks.length > 0) {
+    if (e.key === "Enter" && !e.isComposing && this.filteredLinks.length > 0) {
       e.preventDefault();
       this.goToLink(this.filteredLinks[this.selectedIndex]);
       return;
