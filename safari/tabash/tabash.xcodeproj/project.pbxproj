@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCD0816B2FAAE67800BCD0F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD0816A2FAAE67800BCD0F1 /* AppDelegate.swift */; };
+		BCD0816F2FAAE67800BCD0F1 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = BCD0816D2FAAE67800BCD0F1 /* Main.html */; };
+		BCD081712FAAE67800BCD0F1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD081702FAAE67800BCD0F1 /* Icon.png */; };
+		BCD081732FAAE67800BCD0F1 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = BCD081722FAAE67800BCD0F1 /* Style.css */; };
+		BCD081752FAAE67800BCD0F1 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = BCD081742FAAE67800BCD0F1 /* Script.js */; };
+		BCD081772FAAE67800BCD0F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD081762FAAE67800BCD0F1 /* ViewController.swift */; };
+		BCD0817A2FAAE67800BCD0F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD081782FAAE67800BCD0F1 /* Main.storyboard */; };
+		BCD0817C2FAAE67800BCD0F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD0817B2FAAE67800BCD0F1 /* Assets.xcassets */; };
+		BCD081832FAAE67800BCD0F1 /* tabash Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BCD081822FAAE67800BCD0F1 /* tabash Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BCD081882FAAE67800BCD0F1 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD081872FAAE67800BCD0F1 /* SafariWebExtensionHandler.swift */; };
+		BCD081A32FAAE67800BCD0F1 /* bg-dark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCD081942FAAE67800BCD0F1 /* bg-dark.jpg */; };
+		BCD081A42FAAE67800BCD0F1 /* logo16.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD081952FAAE67800BCD0F1 /* logo16.png */; };
+		BCD081A52FAAE67800BCD0F1 /* react_manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = BCD081962FAAE67800BCD0F1 /* react_manifest.json */; };
+		BCD081A62FAAE67800BCD0F1 /* bg-light.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCD081972FAAE67800BCD0F1 /* bg-light.jpg */; };
+		BCD081A72FAAE67800BCD0F1 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = BCD081982FAAE67800BCD0F1 /* favicon.ico */; };
+		BCD081A82FAAE67800BCD0F1 /* tabash-screenshot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCD081992FAAE67800BCD0F1 /* tabash-screenshot.jpg */; };
+		BCD081A92FAAE67800BCD0F1 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = BCD0819A2FAAE67800BCD0F1 /* index.html */; };
+		BCD081AA2FAAE67800BCD0F1 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = BCD0819B2FAAE67800BCD0F1 /* background.js */; };
+		BCD081AB2FAAE67800BCD0F1 /* logo48.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD0819C2FAAE67800BCD0F1 /* logo48.png */; };
+		BCD081AC2FAAE67800BCD0F1 /* logo128.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD0819D2FAAE67800BCD0F1 /* logo128.png */; };
+		BCD081AD2FAAE67800BCD0F1 /* content in Resources */ = {isa = PBXBuildFile; fileRef = BCD0819E2FAAE67800BCD0F1 /* content */; };
+		BCD081AE2FAAE67800BCD0F1 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = BCD0819F2FAAE67800BCD0F1 /* manifest.json */; };
+		BCD081AF2FAAE67800BCD0F1 /* robots.txt in Resources */ = {isa = PBXBuildFile; fileRef = BCD081A02FAAE67800BCD0F1 /* robots.txt */; };
+		BCD081B02FAAE67800BCD0F1 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = BCD081A12FAAE67800BCD0F1 /* assets */; };
+		BCD081B12FAAE67800BCD0F1 /* logo192.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD081A22FAAE67800BCD0F1 /* logo192.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCD081842FAAE67800BCD0F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCD0815F2FAAE67800BCD0F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCD081812FAAE67800BCD0F1;
+			remoteInfo = "tabash Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BCD0818F2FAAE67800BCD0F1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BCD081832FAAE67800BCD0F1 /* tabash Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BCD081672FAAE67800BCD0F1 /* tabash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD0816A2FAAE67800BCD0F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BCD0816E2FAAE67800BCD0F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		BCD081702FAAE67800BCD0F1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		BCD081722FAAE67800BCD0F1 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		BCD081742FAAE67800BCD0F1 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		BCD081762FAAE67800BCD0F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BCD081792FAAE67800BCD0F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCD0817B2FAAE67800BCD0F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCD0817D2FAAE67800BCD0F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCD081822FAAE67800BCD0F1 /* tabash Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "tabash Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD081872FAAE67800BCD0F1 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		BCD081892FAAE67800BCD0F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCD081942FAAE67800BCD0F1 /* bg-dark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "bg-dark.jpg"; path = "Resources/bg-dark.jpg"; sourceTree = "<group>"; };
+		BCD081952FAAE67800BCD0F1 /* logo16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo16.png; path = Resources/logo16.png; sourceTree = "<group>"; };
+		BCD081962FAAE67800BCD0F1 /* react_manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = react_manifest.json; path = Resources/react_manifest.json; sourceTree = "<group>"; };
+		BCD081972FAAE67800BCD0F1 /* bg-light.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "bg-light.jpg"; path = "Resources/bg-light.jpg"; sourceTree = "<group>"; };
+		BCD081982FAAE67800BCD0F1 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = favicon.ico; path = Resources/favicon.ico; sourceTree = "<group>"; };
+		BCD081992FAAE67800BCD0F1 /* tabash-screenshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "tabash-screenshot.jpg"; path = "Resources/tabash-screenshot.jpg"; sourceTree = "<group>"; };
+		BCD0819A2FAAE67800BCD0F1 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = index.html; path = Resources/index.html; sourceTree = "<group>"; };
+		BCD0819B2FAAE67800BCD0F1 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = Resources/background.js; sourceTree = "<group>"; };
+		BCD0819C2FAAE67800BCD0F1 /* logo48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo48.png; path = Resources/logo48.png; sourceTree = "<group>"; };
+		BCD0819D2FAAE67800BCD0F1 /* logo128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo128.png; path = Resources/logo128.png; sourceTree = "<group>"; };
+		BCD0819E2FAAE67800BCD0F1 /* content */ = {isa = PBXFileReference; lastKnownFileType = folder; name = content; path = Resources/content; sourceTree = "<group>"; };
+		BCD0819F2FAAE67800BCD0F1 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		BCD081A02FAAE67800BCD0F1 /* robots.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = robots.txt; path = Resources/robots.txt; sourceTree = "<group>"; };
+		BCD081A12FAAE67800BCD0F1 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = Resources/assets; sourceTree = "<group>"; };
+		BCD081A22FAAE67800BCD0F1 /* logo192.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo192.png; path = Resources/logo192.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCD081642FAAE67800BCD0F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCD0817F2FAAE67800BCD0F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCD0815E2FAAE67800BCD0F1 = {
+			isa = PBXGroup;
+			children = (
+				BCD081692FAAE67800BCD0F1 /* tabash */,
+				BCD081862FAAE67800BCD0F1 /* tabash Extension */,
+				BCD081682FAAE67800BCD0F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCD081682FAAE67800BCD0F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCD081672FAAE67800BCD0F1 /* tabash.app */,
+				BCD081822FAAE67800BCD0F1 /* tabash Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCD081692FAAE67800BCD0F1 /* tabash */ = {
+			isa = PBXGroup;
+			children = (
+				BCD0816A2FAAE67800BCD0F1 /* AppDelegate.swift */,
+				BCD081762FAAE67800BCD0F1 /* ViewController.swift */,
+				BCD081782FAAE67800BCD0F1 /* Main.storyboard */,
+				BCD0817B2FAAE67800BCD0F1 /* Assets.xcassets */,
+				BCD0817D2FAAE67800BCD0F1 /* Info.plist */,
+				BCD0816C2FAAE67800BCD0F1 /* Resources */,
+			);
+			path = tabash;
+			sourceTree = "<group>";
+		};
+		BCD0816C2FAAE67800BCD0F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BCD0816D2FAAE67800BCD0F1 /* Main.html */,
+				BCD081702FAAE67800BCD0F1 /* Icon.png */,
+				BCD081722FAAE67800BCD0F1 /* Style.css */,
+				BCD081742FAAE67800BCD0F1 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BCD081862FAAE67800BCD0F1 /* tabash Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BCD081932FAAE67800BCD0F1 /* Resources */,
+				BCD081872FAAE67800BCD0F1 /* SafariWebExtensionHandler.swift */,
+				BCD081892FAAE67800BCD0F1 /* Info.plist */,
+			);
+			path = "tabash Extension";
+			sourceTree = "<group>";
+		};
+		BCD081932FAAE67800BCD0F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BCD081942FAAE67800BCD0F1 /* bg-dark.jpg */,
+				BCD081952FAAE67800BCD0F1 /* logo16.png */,
+				BCD081962FAAE67800BCD0F1 /* react_manifest.json */,
+				BCD081972FAAE67800BCD0F1 /* bg-light.jpg */,
+				BCD081982FAAE67800BCD0F1 /* favicon.ico */,
+				BCD081992FAAE67800BCD0F1 /* tabash-screenshot.jpg */,
+				BCD0819A2FAAE67800BCD0F1 /* index.html */,
+				BCD0819B2FAAE67800BCD0F1 /* background.js */,
+				BCD0819C2FAAE67800BCD0F1 /* logo48.png */,
+				BCD0819D2FAAE67800BCD0F1 /* logo128.png */,
+				BCD0819E2FAAE67800BCD0F1 /* content */,
+				BCD0819F2FAAE67800BCD0F1 /* manifest.json */,
+				BCD081A02FAAE67800BCD0F1 /* robots.txt */,
+				BCD081A12FAAE67800BCD0F1 /* assets */,
+				BCD081A22FAAE67800BCD0F1 /* logo192.png */,
+			);
+			name = Resources;
+			path = "tabash Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCD081662FAAE67800BCD0F1 /* tabash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCD081902FAAE67800BCD0F1 /* Build configuration list for PBXNativeTarget "tabash" */;
+			buildPhases = (
+				BCD081632FAAE67800BCD0F1 /* Sources */,
+				BCD081642FAAE67800BCD0F1 /* Frameworks */,
+				BCD081652FAAE67800BCD0F1 /* Resources */,
+				BCD0818F2FAAE67800BCD0F1 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCD081852FAAE67800BCD0F1 /* PBXTargetDependency */,
+			);
+			name = tabash;
+			packageProductDependencies = (
+			);
+			productName = tabash;
+			productReference = BCD081672FAAE67800BCD0F1 /* tabash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCD081812FAAE67800BCD0F1 /* tabash Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCD0818C2FAAE67800BCD0F1 /* Build configuration list for PBXNativeTarget "tabash Extension" */;
+			buildPhases = (
+				BCD0817E2FAAE67800BCD0F1 /* Sources */,
+				BCD0817F2FAAE67800BCD0F1 /* Frameworks */,
+				BCD081802FAAE67800BCD0F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tabash Extension";
+			packageProductDependencies = (
+			);
+			productName = "tabash Extension";
+			productReference = BCD081822FAAE67800BCD0F1 /* tabash Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCD0815F2FAAE67800BCD0F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					BCD081662FAAE67800BCD0F1 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					BCD081812FAAE67800BCD0F1 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = BCD081622FAAE67800BCD0F1 /* Build configuration list for PBXProject "tabash" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCD0815E2FAAE67800BCD0F1;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = BCD081682FAAE67800BCD0F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCD081662FAAE67800BCD0F1 /* tabash */,
+				BCD081812FAAE67800BCD0F1 /* tabash Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCD081652FAAE67800BCD0F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCD081712FAAE67800BCD0F1 /* Icon.png in Resources */,
+				BCD0817A2FAAE67800BCD0F1 /* Main.storyboard in Resources */,
+				BCD081752FAAE67800BCD0F1 /* Script.js in Resources */,
+				BCD0816F2FAAE67800BCD0F1 /* Main.html in Resources */,
+				BCD0817C2FAAE67800BCD0F1 /* Assets.xcassets in Resources */,
+				BCD081732FAAE67800BCD0F1 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCD081802FAAE67800BCD0F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCD081AC2FAAE67800BCD0F1 /* logo128.png in Resources */,
+				BCD081AB2FAAE67800BCD0F1 /* logo48.png in Resources */,
+				BCD081B12FAAE67800BCD0F1 /* logo192.png in Resources */,
+				BCD081AA2FAAE67800BCD0F1 /* background.js in Resources */,
+				BCD081A92FAAE67800BCD0F1 /* index.html in Resources */,
+				BCD081AE2FAAE67800BCD0F1 /* manifest.json in Resources */,
+				BCD081A32FAAE67800BCD0F1 /* bg-dark.jpg in Resources */,
+				BCD081A62FAAE67800BCD0F1 /* bg-light.jpg in Resources */,
+				BCD081A52FAAE67800BCD0F1 /* react_manifest.json in Resources */,
+				BCD081A42FAAE67800BCD0F1 /* logo16.png in Resources */,
+				BCD081B02FAAE67800BCD0F1 /* assets in Resources */,
+				BCD081A82FAAE67800BCD0F1 /* tabash-screenshot.jpg in Resources */,
+				BCD081AD2FAAE67800BCD0F1 /* content in Resources */,
+				BCD081AF2FAAE67800BCD0F1 /* robots.txt in Resources */,
+				BCD081A72FAAE67800BCD0F1 /* favicon.ico in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCD081632FAAE67800BCD0F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCD081772FAAE67800BCD0F1 /* ViewController.swift in Sources */,
+				BCD0816B2FAAE67800BCD0F1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCD0817E2FAAE67800BCD0F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCD081882FAAE67800BCD0F1 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCD081852FAAE67800BCD0F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCD081812FAAE67800BCD0F1 /* tabash Extension */;
+			targetProxy = BCD081842FAAE67800BCD0F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BCD0816D2FAAE67800BCD0F1 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCD0816E2FAAE67800BCD0F1 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		BCD081782FAAE67800BCD0F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCD081792FAAE67800BCD0F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCD0818A2FAAE67800BCD0F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BCD0818B2FAAE67800BCD0F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		BCD0818D2FAAE67800BCD0F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "tabash Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "tabash Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.jiseop.tabash.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BCD0818E2FAAE67800BCD0F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "tabash Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "tabash Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.jiseop.tabash.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BCD081912FAAE67800BCD0F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = tabash/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = tabash;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.jiseop.tabash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BCD081922FAAE67800BCD0F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = tabash/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = tabash;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.jiseop.tabash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCD081622FAAE67800BCD0F1 /* Build configuration list for PBXProject "tabash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD0818A2FAAE67800BCD0F1 /* Debug */,
+				BCD0818B2FAAE67800BCD0F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCD0818C2FAAE67800BCD0F1 /* Build configuration list for PBXNativeTarget "tabash Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD0818D2FAAE67800BCD0F1 /* Debug */,
+				BCD0818E2FAAE67800BCD0F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCD081902FAAE67800BCD0F1 /* Build configuration list for PBXNativeTarget "tabash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD081912FAAE67800BCD0F1 /* Debug */,
+				BCD081922FAAE67800BCD0F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCD0815F2FAAE67800BCD0F1 /* Project object */;
+}
