@@ -1,0 +1,5 @@
+build/
+.derived-data/
+web-extension/dist/
+web-extension/node_modules/
+web-extension/tsconfig.tsbuildinfo

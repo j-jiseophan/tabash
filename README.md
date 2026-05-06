@@ -30,6 +30,20 @@ Load as an unpacked extension
 ```
 Chrome > More tools > Extensions > Load unpacked > select the build directory
 ```
+
+## Safari
+
+There is a local-only macOS Safari port under [`safari/`](./safari).
+It includes a Safari Web Extension container app and a CLI build script.
+
+```Shell
+safari/scripts/build-local.sh
+open safari/build/Debug/tabash.app
+```
+
+Safari requires unsigned extensions to be enabled for local development. See
+[`safari/README.md`](./safari/README.md) for setup, permissions, and troubleshooting.
+
 ## Examples
 
 > type "help" in tabash for more info
@@ -54,4 +68,3 @@ $ gh
 
 ~~install a package from [tire](https://github.com/j-jiseophan/tire) (alarm, for example)~~
 tire is deprecated since it's unavailable in Manifest V3
-
